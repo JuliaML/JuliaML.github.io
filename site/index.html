@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>JuliaML - Learning from Data with Julia</title>
+      
+      
+        <meta name="description" content="Learning from Data with Julia">
+      
+      
+        <link rel="canonical" href="https://JuliaML.github.io/">
+      
+      
+        <meta name="author" content="JuliaML Members and Contributors">
+      
+    
+    <meta property="og:url" content="https://JuliaML.github.io/">
+    <meta property="og:title" content="JuliaML">
+    <meta property="og:image" content="https://JuliaML.github.io//./images/juliaml_logo.png">
+    <meta name="apple-mobile-web-app-title" content="JuliaML">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+      <link rel="apple-touch-icon" href="./images/juliaml_logo.png">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('./assets/fonts/icon.eot?52m981');
+      	src: url('./assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('./assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('./assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('./assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="./assets/stylesheets/application-a422ff04cc.css">
+    
+      <link rel="stylesheet" href="./assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="./assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-blue-grey palette-accent-grey">
+    
+      
+      
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+          </span>
+        
+        JuliaML
+      </div>
+    </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/JuliaML" title="@JuliaML on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="https://github.com/JuliaML/Learn.jl" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="./images/juliaml_logo.png">
+        </div>
+      
+      <div class="name">
+        <strong>
+          JuliaML
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+          <br>
+          JuliaML/Learn.jl
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            
+            <a href="https://github.com/JuliaML/Learn.jl/archive/master.zip" target="_blank" title="Download" data-action="download">
+              <i class="icon icon-download"></i> Download
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/JuliaML/Learn.jl/stargazers" target="_blank" title="Stargazers" data-action="star">
+              <i class="icon icon-star"></i> Stars
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="current" title="Home" href=".">
+      Home
+    </a>
+    
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Learn" href="#learn">
+                Learn
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="LearnBase" href="#learnbase">
+                LearnBase
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Losses" href="#losses">
+                Losses
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Transformations" href="#transformations">
+                Transformations
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="ObjectiveFunctions" href="#objectivefunctions">
+                ObjectiveFunctions
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="StochasticOptimization" href="#stochasticoptimization">
+                StochasticOptimization
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="MLDataUtils" href="#mldatautils">
+                MLDataUtils
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="MLRisk" href="#mlrisk">
+                MLRisk
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="MLMetrics" href="#mlmetrics">
+                MLMetrics
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="MLPlots" href="#mlplots">
+                MLPlots
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="MLKernels" href="#mlkernels">
+                MLKernels
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Design" href="design/">
+      Design
+    </a>
+    
+  </li>
+
+          
+        </ul>
+        
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/JuliaML" target="_blank" title="@JuliaML on GitHub">
+                  @JuliaML on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+            <h1>JuliaML</h1>
+          
+          <p>JuliaML is your one-stop-shop for learning models from data.  We provide general abstractions and algorithms for modeling and optimization, along with implementations of common models:</p>
+<ul>
+<li>Flexible objective functions, and cost components:<ul>
+<li>Losses (supervised distance and margin losses, etc)</li>
+<li>Penalties (L1/L2 regularization, etc)</li>
+<li>(TODO) and other Costs</li>
+</ul>
+</li>
+<li>Generic transformations:<ul>
+<li>Static transforms (log, exp, sqrt, etc)</li>
+<li>Activation functions (sigmoid, tanh, ReLU, etc)</li>
+<li>Centering/scaling/normalization</li>
+<li>Dimensionality reduction</li>
+<li>Affine transformations (y = wx + b)</li>
+<li>(TODO) Directed Acyclic Graphs (DAG) of sub-transformations</li>
+</ul>
+</li>
+<li>Learning algorithms<ul>
+<li>Online and Offline optimization</li>
+<li>Gradient-based update models (SGD w/ momentum, Adagrad, ADAM, etc)</li>
+<li>(TODO) Learning rate strategies (decaying, adaptive, etc)</li>
+<li>(TODO) Hyperparameter fitting</li>
+<li>(TODO) Ensembles</li>
+</ul>
+</li>
+<li>Common/standard approaches<ul>
+<li>Empirical Risk Minimization</li>
+<li>Ridge Regression, LASSO</li>
+<li>(TODO) Support Vector Machines (SVM)</li>
+<li>(TODO) Neural Nets (ANN), Deep Learning (DL)</li>
+<li>(TODO) Decision Trees and Random Forests</li>
+</ul>
+</li>
+</ul>
+<p>The design and structure of the organization is geared towards a modular and composable approach to all things data science.  Plug and play models, losses, penalties, and algorithms however you see fit, and at whatever granularity is appropriate.  Beginner users and those looking for ready-made solutions can use the convenience package <a href="https://github.com/JuliaML/Learn.jl">Learn</a>.  For custom modeling solutions, choose methods and components from any package:</p>
+<h2 id="learn"><a href="https://github.com/JuliaML/Learn.jl">Learn</a></h2>
+<p>An all-in-one workbench, which simply imports and re-exports the packages below.  This is a convenience wrapper for an easy way to get started with the JuliaML ecosystem.</p>
+<h2 id="learnbase"><a href="https://github.com/JuliaML/LearnBase.jl">LearnBase</a></h2>
+<p>The abstractions and methods for JuliaML packages.  This is a core dependency of most packages.</p>
+<h2 id="losses"><a href="https://github.com/JuliaML/Losses.jl">Losses</a></h2>
+<p>Supervised and unsupervised loss functions for both distance-based (probabilities and regressions) and margin-based (SVM) approaches.</p>
+<h2 id="transformations"><a href="https://github.com/JuliaML/Transformations.jl">Transformations</a></h2>
+<p>Static transforms, activation functions, and more.</p>
+<h2 id="objectivefunctions"><a href="https://github.com/JuliaML/ObjectiveFunctions.jl">ObjectiveFunctions</a></h2>
+<p>Generic definitions of objective functions using abstractions from LearnBase.</p>
+<h2 id="stochasticoptimization"><a href="https://github.com/JuliaML/StochasticOptimization.jl">StochasticOptimization</a></h2>
+<p>Gradient descent and online optimization algorithms and components.  Parameter update models (Adagrad, ADAM, etc).  Proximal methods.</p>
+<h2 id="mldatautils"><a href="https://github.com/JuliaML/MLDataUtils.jl">MLDataUtils</a></h2>
+<p>Dataset iteration and splitting (test/train, K-folds cross validation, batching, etc).</p>
+<h2 id="mlrisk"><a href="https://github.com/JuliaML/MLRisk.jl">MLRisk</a></h2>
+<p>Empirical risk minimization.</p>
+<h2 id="mlmetrics"><a href="https://github.com/JuliaML/MLMetrics.jl">MLMetrics</a></h2>
+<p>Metrics for scoring machine learning models in Julia.  MSE, accuracy, and more.</p>
+<h2 id="mlplots"><a href="https://github.com/JuliaML/MLPlots.jl">MLPlots</a></h2>
+<p>Plotting recipes to be used with <a href="https://github.com/tbreloff/Plots.jl">Plots</a>.  Also check out <a href="https://github.com/JuliaPlots/PlotRecipes.jl">PlotRecipes</a>.</p>
+<h2 id="mlkernels"><a href="https://github.com/JuliaML/MLKernels.jl">MLKernels</a></h2>
+<p>A Julia package for Mercer kernel functions (or the covariance functions used in Gaussian processes) that are used in the kernel methods of machine learning.</p>
+          <aside class="copyright" role="note">
+            
+              Copyright &copy; 2015-2016 JuliaML Members &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+    </div>
+    <div class="next">
+      
+        <a href="design/" title="Design">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                Design
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '.';
+      var repo_id  = 'JuliaML/Learn.jl';
+    </script>
+    <script src="./assets/javascripts/application-997097ee0c.js"></script>
+    
+      <script src="./mathjax-config.js"></script>
+    
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    
+    
+  </body>
+</html>
