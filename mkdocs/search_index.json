@@ -1,0 +1,69 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "JuliaML is your one-stop-shop for learning models from data.  We provide general abstractions and algorithms for modeling and optimization, along with implementations of common models:\n\n\n\n\nFlexible objective functions, and cost components:\n\n\nLosses (supervised distance and margin losses, etc)\n\n\nPenalties (L1/L2 regularization, etc)\n\n\n(TODO) and other Costs\n\n\n\n\n\n\nGeneric transformations:\n\n\nStatic transforms (log, exp, sqrt, etc)\n\n\nActivation functions (sigmoid, tanh, ReLU, etc)\n\n\nCentering/scaling/normalization\n\n\nDimensionality reduction\n\n\nAffine transformations (y = wx + b)\n\n\n(TODO) Directed Acyclic Graphs (DAG) of sub-transformations\n\n\n\n\n\n\nLearning algorithms\n\n\nOnline and Offline optimization\n\n\nGradient-based update models (SGD w/ momentum, Adagrad, ADAM, etc)\n\n\n(TODO) Learning rate strategies (decaying, adaptive, etc)\n\n\n(TODO) Hyperparameter fitting\n\n\n(TODO) Ensembles\n\n\n\n\n\n\nCommon/standard approaches\n\n\nEmpirical Risk Minimization\n\n\nRidge Regression, LASSO\n\n\n(TODO) Support Vector Machines (SVM)\n\n\n(TODO) Neural Nets (ANN), Deep Learning (DL)\n\n\n(TODO) Decision Trees and Random Forests\n\n\n\n\n\n\n\n\nThe design and structure of the organization is geared towards a modular and composable approach to all things data science.  Plug and play models, losses, penalties, and algorithms however you see fit, and at whatever granularity is appropriate.  Beginner users and those looking for ready-made solutions can use the convenience package \nLearn\n.  For custom modeling solutions, choose methods and components from any package:\n\n\nLearn\n\n\nAn all-in-one workbench, which simply imports and re-exports the packages below.  This is a convenience wrapper for an easy way to get started with the JuliaML ecosystem.\n\n\nLearnBase\n\n\nThe abstractions and methods for JuliaML packages.  This is a core dependency of most packages.\n\n\nLosses\n\n\nSupervised and unsupervised loss functions for both distance-based (probabilities and regressions) and margin-based (SVM) approaches.\n\n\nTransformations\n\n\nStatic transforms, activation functions, and more.\n\n\nObjectiveFunctions\n\n\nGeneric definitions of objective functions using abstractions from LearnBase.\n\n\nStochasticOptimization\n\n\nGradient descent and online optimization algorithms and components.  Parameter update models (Adagrad, ADAM, etc).  Proximal methods.\n\n\nMLDataUtils\n\n\nDataset iteration and splitting (test/train, K-folds cross validation, batching, etc).\n\n\nMLRisk\n\n\nEmpirical risk minimization.\n\n\nMLMetrics\n\n\nMetrics for scoring machine learning models in Julia.  MSE, accuracy, and more.\n\n\nMLPlots\n\n\nPlotting recipes to be used with \nPlots\n.  Also check out \nPlotRecipes\n.\n\n\nMLKernels\n\n\nA Julia package for Mercer kernel functions (or the covariance functions used in Gaussian processes) that are used in the kernel methods of machine learning.", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#learn", 
+            "text": "An all-in-one workbench, which simply imports and re-exports the packages below.  This is a convenience wrapper for an easy way to get started with the JuliaML ecosystem.", 
+            "title": "Learn"
+        }, 
+        {
+            "location": "/#learnbase", 
+            "text": "The abstractions and methods for JuliaML packages.  This is a core dependency of most packages.", 
+            "title": "LearnBase"
+        }, 
+        {
+            "location": "/#losses", 
+            "text": "Supervised and unsupervised loss functions for both distance-based (probabilities and regressions) and margin-based (SVM) approaches.", 
+            "title": "Losses"
+        }, 
+        {
+            "location": "/#transformations", 
+            "text": "Static transforms, activation functions, and more.", 
+            "title": "Transformations"
+        }, 
+        {
+            "location": "/#objectivefunctions", 
+            "text": "Generic definitions of objective functions using abstractions from LearnBase.", 
+            "title": "ObjectiveFunctions"
+        }, 
+        {
+            "location": "/#stochasticoptimization", 
+            "text": "Gradient descent and online optimization algorithms and components.  Parameter update models (Adagrad, ADAM, etc).  Proximal methods.", 
+            "title": "StochasticOptimization"
+        }, 
+        {
+            "location": "/#mldatautils", 
+            "text": "Dataset iteration and splitting (test/train, K-folds cross validation, batching, etc).", 
+            "title": "MLDataUtils"
+        }, 
+        {
+            "location": "/#mlrisk", 
+            "text": "Empirical risk minimization.", 
+            "title": "MLRisk"
+        }, 
+        {
+            "location": "/#mlmetrics", 
+            "text": "Metrics for scoring machine learning models in Julia.  MSE, accuracy, and more.", 
+            "title": "MLMetrics"
+        }, 
+        {
+            "location": "/#mlplots", 
+            "text": "Plotting recipes to be used with  Plots .  Also check out  PlotRecipes .", 
+            "title": "MLPlots"
+        }, 
+        {
+            "location": "/#mlkernels", 
+            "text": "A Julia package for Mercer kernel functions (or the covariance functions used in Gaussian processes) that are used in the kernel methods of machine learning.", 
+            "title": "MLKernels"
+        }, 
+        {
+            "location": "/design/", 
+            "text": "The design and structure of JuliaML has been discussed in many forums and with many participants.  Our goal was to unify approaches to modelling and learning, where the difference between models is not as great as one might think. Whether Bayesian or Frequentist, Statistician, Data Scientist, or Machine Learning researcher, we are unified by the underlying math.  The design of this ecosystem is an attempt to find the similarities among techniques, and collaborate as much as possible.\n\n\nSee the \nearly issues of Losses.jl\n (formerly Evizero/LearnBase.jl) for early discussions, as well as \nissues in OnlineStats.jl\n, and of course \nJuliaML/Roadmap.jl\n (especially \nissue #8\n).", 
+            "title": "Design"
+        }
+    ]
+}
