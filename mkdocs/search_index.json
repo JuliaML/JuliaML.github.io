@@ -2,68 +2,163 @@
     "docs": [
         {
             "location": "/", 
-            "text": "JuliaML is your one-stop-shop for learning models from data.  We provide general abstractions and algorithms for modeling and optimization, along with implementations of common models:\n\n\n\n\nFlexible objective functions, and cost components:\n\n\nLosses (supervised distance and margin losses, etc)\n\n\nPenalties (L1/L2 regularization, etc)\n\n\n(TODO) and other Costs\n\n\n\n\n\n\nGeneric transformations:\n\n\nStatic transforms (log, exp, sqrt, etc)\n\n\nActivation functions (sigmoid, tanh, ReLU, etc)\n\n\nCentering/scaling/normalization\n\n\nDimensionality reduction\n\n\nAffine transformations (y = wx + b)\n\n\n(TODO) Directed Acyclic Graphs (DAG) of sub-transformations\n\n\n\n\n\n\nLearning algorithms\n\n\nOnline and Offline optimization\n\n\nGradient-based update models (SGD w/ momentum, Adagrad, ADAM, etc)\n\n\n(TODO) Learning rate strategies (decaying, adaptive, etc)\n\n\n(TODO) Hyperparameter fitting\n\n\n(TODO) Ensembles\n\n\n\n\n\n\nCommon/standard approaches\n\n\nEmpirical Risk Minimization\n\n\nRidge Regression, LASSO\n\n\n(TODO) Support Vector Machines (SVM)\n\n\n(TODO) Neural Nets (ANN), Deep Learning (DL)\n\n\n(TODO) Decision Trees and Random Forests\n\n\n\n\n\n\n\n\nThe design and structure of the organization is geared towards a modular and composable approach to all things data science.  Plug and play models, losses, penalties, and algorithms however you see fit, and at whatever granularity is appropriate.  Beginner users and those looking for ready-made solutions can use the convenience package \nLearn\n.  For custom modeling solutions, choose methods and components from any package:\n\n\nLearn\n\n\nAn all-in-one workbench, which simply imports and re-exports the packages below.  This is a convenience wrapper for an easy way to get started with the JuliaML ecosystem.\n\n\nLearnBase\n\n\nThe abstractions and methods for JuliaML packages.  This is a core dependency of most packages.\n\n\nLosses\n\n\nSupervised and unsupervised loss functions for both distance-based (probabilities and regressions) and margin-based (SVM) approaches.\n\n\nTransformations\n\n\nStatic transforms, activation functions, and more.\n\n\nObjectiveFunctions\n\n\nGeneric definitions of objective functions using abstractions from LearnBase.\n\n\nStochasticOptimization\n\n\nGradient descent and online optimization algorithms and components.  Parameter update models (Adagrad, ADAM, etc).  Proximal methods.\n\n\nMLDataUtils\n\n\nDataset iteration and splitting (test/train, K-folds cross validation, batching, etc).\n\n\nMLRisk\n\n\nEmpirical risk minimization.\n\n\nMLMetrics\n\n\nMetrics for scoring machine learning models in Julia.  MSE, accuracy, and more.\n\n\nMLPlots\n\n\nPlotting recipes to be used with \nPlots\n.  Also check out \nPlotRecipes\n.\n\n\nMLKernels\n\n\nA Julia package for Mercer kernel functions (or the covariance functions used in Gaussian processes) that are used in the kernel methods of machine learning.", 
+            "text": "JuliaML is your one-stop-shop for learning models from data.  We provide general abstractions and algorithms for modeling and optimization, along with implementations of common models:\n\n\n\n\nFlexible objective functions, and cost components:\n\n\nLosses (supervised distance and margin losses, etc)\n\n\nPenalties (L1/L2 regularization, etc)\n\n\nModular objective functions\n\n\n\n\n\n\nGeneric transformations:\n\n\nStatic transforms (log, exp, sqrt, etc)\n\n\nActivation functions (sigmoid, tanh, ReLU, etc)\n\n\nCentering/scaling/normalization\n\n\nDimensionality reduction\n\n\nAffine transformations (y = wx + b)\n\n\nNeural nets, deep learning\n\n\n\n\n\n\nLearning algorithms\n\n\nOnline and Offline optimization\n\n\nGradient-based update models (SGD w/ momentum, Adagrad, ADAM, etc)\n\n\n(TODO) Learning rate strategies (decaying, adaptive, etc)\n\n\n(TODO) Hyperparameter fitting\n\n\n(TODO) Ensembles\n\n\n\n\n\n\nCommon/standard approaches\n\n\nEmpirical Risk Minimization\n\n\nRidge Regression, LASSO\n\n\n(TODO) Support Vector Machines (SVM)\n\n\n(TODO) Neural Nets (ANN), Deep Learning (DL)\n\n\n(TODO) Decision Trees and Random Forests\n\n\n\n\n\n\n\n\n\n\nThe design and structure of the organization is geared towards a modular and composable approach to all things data science.  Plug and play models, losses, penalties, and algorithms however you see fit, and at whatever granularity is appropriate.  Beginner users and those looking for ready-made solutions can use the convenience package \nLearn\n.  For custom modeling solutions, choose methods and components from any package:\n\n\nLearn\n: An all-in-one workbench, which simply imports and re-exports the packages below.  This is a convenience wrapper for an easy way to get started with the JuliaML ecosystem.\n\n\n\n\nCore\n\n\nLearnBase\n: The abstractions and methods for JuliaML packages.  This is a core dependency of most packages.\n\n\nLossFunctions\n: Supervised and unsupervised loss functions for both distance-based (probabilities and regressions) and margin-based (SVM) approaches.\n\n\nObjectiveFunctions\n: Generic definitions of objective functions using abstractions from LearnBase.\n\n\nPenaltyFunctions\n:  Provides generic implementations for a diverse set of penalty functions that are commonly used for regularization purposes.\n\n\nMLKernels\n: A Julia package for Mercer kernel functions (or the covariance functions used in Gaussian processes) that are used in the kernel methods of machine learning.\n\n\nTransformations\n (experimental): Dynamic tensor computation framework. Static transforms, activation functions, neural nets, and more.\n\n\n\n\nLearning Algorithms\n\n\nLearningStrategies\n: A generic and modular framework for building custom iterative algorithms in Julia.\n\n\nStochasticOptimization\n: Extension of LearningStrategies implementing stochastic gradient descent and online optimization algorithms and components.  Parameter update models (Adagrad, ADAM, etc).  Minibatch gradient averaging.\n\n\n\n\nReinforcement Learning\n\n\nReinforce\n: Abstractions, algorithms, and utilities for reinforcement learning in Julia\n\n\nOpenAIGym\n: OpenAI's Gym wrapped as a Reinforce.jl environment\n\n\nAtariAlgos\n: Arcade Learning Environment (ALE) wrapped as a Reinforce.jl environment\n\n\n\n\nTools\n\n\nMLDataUtils\n: Dataset iteration and splitting (test/train, K-folds cross validation, batching, etc).\n\n\nMLLabelUtils\n: Utility package for working with classification targets and label-encodings (\nDocs\n)\n\n\nMLDatasets\n: Machine Learning Datasets for Julia\n\n\nMLMetrics\n: Metrics for scoring machine learning models in Julia.  MSE, accuracy, and more.\n\n\nValueHistories\n: Utilities to efficiently track learning curves or other optimization information\n\n\nMLPlots\n: Plotting recipes to be used with \nPlots\n.  Also check out \nPlotRecipes\n.\n\n\n\n\nOther notable packages\n\n\nMXNet\n: MXNet Julia Package - flexible and efficient deep learning in Julia\n\n\nTensorFlow\n: A Julia wrapper for TensorFlow\n\n\nKnet\n: Ko\u00e7 University deep learning framework.  It supports GPU operation and automatic differentiation using dynamic computational graphs for models defined in plain Julia.\n\n\nMocha\n: Deep Learning framework for Julia (author recommends MXNet instead)\n\n\nKSVM\n: Support Vector Machines (SVM) in pure Julia\n\n\nother AI packages", 
             "title": "Home"
         }, 
         {
-            "location": "/#learn", 
-            "text": "An all-in-one workbench, which simply imports and re-exports the packages below.  This is a convenience wrapper for an easy way to get started with the JuliaML ecosystem.", 
-            "title": "Learn"
+            "location": "/#learn-an-all-in-one-workbench-which-simply-imports-and-re-exports-the-packages-below-this-is-a-convenience-wrapper-for-an-easy-way-to-get-started-with-the-juliaml-ecosystem", 
+            "text": "", 
+            "title": "Learn: An all-in-one workbench, which simply imports and re-exports the packages below.  This is a convenience wrapper for an easy way to get started with the JuliaML ecosystem."
         }, 
         {
-            "location": "/#learnbase", 
-            "text": "The abstractions and methods for JuliaML packages.  This is a core dependency of most packages.", 
-            "title": "LearnBase"
+            "location": "/#core", 
+            "text": "", 
+            "title": "Core"
         }, 
         {
-            "location": "/#losses", 
-            "text": "Supervised and unsupervised loss functions for both distance-based (probabilities and regressions) and margin-based (SVM) approaches.", 
-            "title": "Losses"
+            "location": "/#learnbase-the-abstractions-and-methods-for-juliaml-packages-this-is-a-core-dependency-of-most-packages", 
+            "text": "", 
+            "title": "LearnBase: The abstractions and methods for JuliaML packages.  This is a core dependency of most packages."
         }, 
         {
-            "location": "/#transformations", 
-            "text": "Static transforms, activation functions, and more.", 
-            "title": "Transformations"
+            "location": "/#lossfunctions-supervised-and-unsupervised-loss-functions-for-both-distance-based-probabilities-and-regressions-and-margin-based-svm-approaches", 
+            "text": "", 
+            "title": "LossFunctions: Supervised and unsupervised loss functions for both distance-based (probabilities and regressions) and margin-based (SVM) approaches."
         }, 
         {
-            "location": "/#objectivefunctions", 
-            "text": "Generic definitions of objective functions using abstractions from LearnBase.", 
-            "title": "ObjectiveFunctions"
+            "location": "/#objectivefunctions-generic-definitions-of-objective-functions-using-abstractions-from-learnbase", 
+            "text": "", 
+            "title": "ObjectiveFunctions: Generic definitions of objective functions using abstractions from LearnBase."
         }, 
         {
-            "location": "/#stochasticoptimization", 
-            "text": "Gradient descent and online optimization algorithms and components.  Parameter update models (Adagrad, ADAM, etc).  Proximal methods.", 
-            "title": "StochasticOptimization"
+            "location": "/#penaltyfunctions-provides-generic-implementations-for-a-diverse-set-of-penalty-functions-that-are-commonly-used-for-regularization-purposes", 
+            "text": "", 
+            "title": "PenaltyFunctions:  Provides generic implementations for a diverse set of penalty functions that are commonly used for regularization purposes."
         }, 
         {
-            "location": "/#mldatautils", 
-            "text": "Dataset iteration and splitting (test/train, K-folds cross validation, batching, etc).", 
-            "title": "MLDataUtils"
+            "location": "/#mlkernels-a-julia-package-for-mercer-kernel-functions-or-the-covariance-functions-used-in-gaussian-processes-that-are-used-in-the-kernel-methods-of-machine-learning", 
+            "text": "", 
+            "title": "MLKernels: A Julia package for Mercer kernel functions (or the covariance functions used in Gaussian processes) that are used in the kernel methods of machine learning."
         }, 
         {
-            "location": "/#mlrisk", 
-            "text": "Empirical risk minimization.", 
-            "title": "MLRisk"
+            "location": "/#transformations-experimental-dynamic-tensor-computation-framework-static-transforms-activation-functions-neural-nets-and-more", 
+            "text": "", 
+            "title": "Transformations (experimental): Dynamic tensor computation framework. Static transforms, activation functions, neural nets, and more."
         }, 
         {
-            "location": "/#mlmetrics", 
-            "text": "Metrics for scoring machine learning models in Julia.  MSE, accuracy, and more.", 
-            "title": "MLMetrics"
+            "location": "/#learning-algorithms", 
+            "text": "", 
+            "title": "Learning Algorithms"
         }, 
         {
-            "location": "/#mlplots", 
-            "text": "Plotting recipes to be used with  Plots .  Also check out  PlotRecipes .", 
-            "title": "MLPlots"
+            "location": "/#learningstrategies-a-generic-and-modular-framework-for-building-custom-iterative-algorithms-in-julia", 
+            "text": "", 
+            "title": "LearningStrategies: A generic and modular framework for building custom iterative algorithms in Julia."
         }, 
         {
-            "location": "/#mlkernels", 
-            "text": "A Julia package for Mercer kernel functions (or the covariance functions used in Gaussian processes) that are used in the kernel methods of machine learning.", 
-            "title": "MLKernels"
+            "location": "/#stochasticoptimization-extension-of-learningstrategies-implementing-stochastic-gradient-descent-and-online-optimization-algorithms-and-components-parameter-update-models-adagrad-adam-etc-minibatch-gradient-averaging", 
+            "text": "", 
+            "title": "StochasticOptimization: Extension of LearningStrategies implementing stochastic gradient descent and online optimization algorithms and components.  Parameter update models (Adagrad, ADAM, etc).  Minibatch gradient averaging."
+        }, 
+        {
+            "location": "/#reinforcement-learning", 
+            "text": "", 
+            "title": "Reinforcement Learning"
+        }, 
+        {
+            "location": "/#reinforce-abstractions-algorithms-and-utilities-for-reinforcement-learning-in-julia", 
+            "text": "", 
+            "title": "Reinforce: Abstractions, algorithms, and utilities for reinforcement learning in Julia"
+        }, 
+        {
+            "location": "/#openaigym-openais-gym-wrapped-as-a-reinforcejl-environment", 
+            "text": "", 
+            "title": "OpenAIGym: OpenAI's Gym wrapped as a Reinforce.jl environment"
+        }, 
+        {
+            "location": "/#atarialgos-arcade-learning-environment-ale-wrapped-as-a-reinforcejl-environment", 
+            "text": "", 
+            "title": "AtariAlgos: Arcade Learning Environment (ALE) wrapped as a Reinforce.jl environment"
+        }, 
+        {
+            "location": "/#tools", 
+            "text": "", 
+            "title": "Tools"
+        }, 
+        {
+            "location": "/#mldatautils-dataset-iteration-and-splitting-testtrain-k-folds-cross-validation-batching-etc", 
+            "text": "", 
+            "title": "MLDataUtils: Dataset iteration and splitting (test/train, K-folds cross validation, batching, etc)."
+        }, 
+        {
+            "location": "/#mllabelutils-utility-package-for-working-with-classification-targets-and-label-encodings-docs", 
+            "text": "", 
+            "title": "MLLabelUtils: Utility package for working with classification targets and label-encodings (Docs)"
+        }, 
+        {
+            "location": "/#mldatasets-machine-learning-datasets-for-julia", 
+            "text": "", 
+            "title": "MLDatasets: Machine Learning Datasets for Julia"
+        }, 
+        {
+            "location": "/#mlmetrics-metrics-for-scoring-machine-learning-models-in-julia-mse-accuracy-and-more", 
+            "text": "", 
+            "title": "MLMetrics: Metrics for scoring machine learning models in Julia.  MSE, accuracy, and more."
+        }, 
+        {
+            "location": "/#valuehistories-utilities-to-efficiently-track-learning-curves-or-other-optimization-information", 
+            "text": "", 
+            "title": "ValueHistories: Utilities to efficiently track learning curves or other optimization information"
+        }, 
+        {
+            "location": "/#mlplots-plotting-recipes-to-be-used-with-plots-also-check-out-plotrecipes", 
+            "text": "", 
+            "title": "MLPlots: Plotting recipes to be used with Plots.  Also check out PlotRecipes."
+        }, 
+        {
+            "location": "/#other-notable-packages", 
+            "text": "", 
+            "title": "Other notable packages"
+        }, 
+        {
+            "location": "/#mxnet-mxnet-julia-package-flexible-and-efficient-deep-learning-in-julia", 
+            "text": "", 
+            "title": "MXNet: MXNet Julia Package - flexible and efficient deep learning in Julia"
+        }, 
+        {
+            "location": "/#tensorflow-a-julia-wrapper-for-tensorflow", 
+            "text": "", 
+            "title": "TensorFlow: A Julia wrapper for TensorFlow"
+        }, 
+        {
+            "location": "/#knet-koc-university-deep-learning-framework-it-supports-gpu-operation-and-automatic-differentiation-using-dynamic-computational-graphs-for-models-defined-in-plain-julia", 
+            "text": "", 
+            "title": "Knet: Ko\u00e7 University deep learning framework.  It supports GPU operation and automatic differentiation using dynamic computational graphs for models defined in plain Julia."
+        }, 
+        {
+            "location": "/#mocha-deep-learning-framework-for-julia-author-recommends-mxnet-instead", 
+            "text": "", 
+            "title": "Mocha: Deep Learning framework for Julia (author recommends MXNet instead)"
+        }, 
+        {
+            "location": "/#ksvm-support-vector-machines-svm-in-pure-julia", 
+            "text": "", 
+            "title": "KSVM: Support Vector Machines (SVM) in pure Julia"
+        }, 
+        {
+            "location": "/#other-ai-packages", 
+            "text": "", 
+            "title": "other AI packages"
         }, 
         {
             "location": "/design/", 
-            "text": "The design and structure of JuliaML has been discussed in many forums and with many participants.  Our goal was to unify approaches to modelling and learning, where the difference between models is not as great as one might think. Whether Bayesian or Frequentist, Statistician, Data Scientist, or Machine Learning researcher, we are unified by the underlying math.  The design of this ecosystem is an attempt to find the similarities among techniques, and collaborate as much as possible.\n\n\nSee the \nearly issues of Losses.jl\n (formerly Evizero/LearnBase.jl) for early discussions, as well as \nissues in OnlineStats.jl\n, and of course \nJuliaML/Roadmap.jl\n (especially \nissue #8\n).", 
+            "text": "The design and structure of JuliaML has been discussed in many forums and with many participants.  Our goal was to unify approaches to modeling and learning, where the difference between models is not as great as one might think. Whether Bayesian or Frequentist, Statistician, Data Scientist, or Machine Learning researcher, we are unified by the underlying math.  The design of this ecosystem is an attempt to find the similarities among techniques, and collaborate as much as possible.\n\n\nSee the \nearly issues of Losses.jl\n (formerly Evizero/LearnBase.jl) for early discussions, as well as \nissues in OnlineStats.jl\n, and of course \nJuliaML/Roadmap.jl\n (especially \nissue #8\n).", 
             "title": "Design"
+        }, 
+        {
+            "location": "/contributing/", 
+            "text": "See the \nmain contributing issue\n\n\nSome \nideas for GSoC\n.\n\n\nGeneral guidelines for contributing can be found in the \nPlots guide\n.", 
+            "title": "Contributing"
         }
     ]
 }
