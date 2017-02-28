@@ -31,9 +31,9 @@ Generic definitions of objective functions using abstractions from LearnBase.
 
 A Julia package for Mercer kernel functions (or the covariance functions used in Gaussian processes) that are used in the kernel methods of machine learning.
 
-### [Transformations](https://github.com/JuliaML/Transformations.jl)
+### [Transformations](https://github.com/JuliaML/Transformations.jl) (experimental)
 
-experimental): Dynamic tensor computation framework. Static transforms, activation functions, neural nets, and more.
+Dynamic tensor computation framework. Static transforms, activation functions, neural nets, and more.
 
 ---
 
