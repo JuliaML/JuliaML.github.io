@@ -1,16 +1,10 @@
+
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
-<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
-<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
-<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+<html class="no-js">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
-      
-        <title>JuliaML - Learning from Data with Julia</title>
-      
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
       
         <meta name="description" content="Learning from Data with Julia">
       
@@ -20,286 +14,717 @@
       
         <meta name="author" content="JuliaML Members and Contributors">
       
-    
-    <meta property="og:url" content="https://JuliaML.github.io/">
-    <meta property="og:title" content="JuliaML">
-    <meta property="og:image" content="https://JuliaML.github.io//./images/juliaml_logo.png">
-    <meta name="apple-mobile-web-app-title" content="JuliaML">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
-      <link rel="apple-touch-icon" href="./images/juliaml_logo.png">
-    
-    
-    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon-e565ddfa3b.ico">
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon-e565ddfa3b.ico">
-    <style>
-      @font-face {
-      	font-family: 'Icon';
-      	src: url('./assets/fonts/icon.eot?52m981');
-      	src: url('./assets/fonts/icon.eot?#iefix52m981')
-               format('embedded-opentype'),
-      		   url('./assets/fonts/icon.woff?52m981')
-               format('woff'),
-      		   url('./assets/fonts/icon.ttf?52m981')
-               format('truetype'),
-      		   url('./assets/fonts/icon.svg?52m981#icon')
-               format('svg');
-      	font-weight: normal;
-      	font-style: normal;
-      }
-    </style>
-    <link rel="stylesheet" href="./assets/stylesheets/application-a422ff04cc.css">
-    
-      <link rel="stylesheet" href="./assets/stylesheets/palettes-05ab2406df.css">
+      
+        <link rel="shortcut icon" href="./assets/images/favicon.ico">
+      
+      <meta name="generator" content="mkdocs+mkdocs-material#1.0.3">
     
     
       
+        <title>Home - JuliaML</title>
       
-      
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
-      <style>
-        body, input {
-          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
-        }
-        pre, code {
-          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
-        }
-      </style>
     
     
-    <script src="./assets/javascripts/modernizr-4ab42b99fd.js"></script>
+      <script src="./assets/javascripts/modernizr-facb31f4a3.js"></script>
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="./assets/stylesheets/application-f3ab63f78a.css">
+      
+        <link rel="stylesheet" href="./assets/stylesheets/application-02ce7adcc2.palette.css">
+      
+      
+    
     
   </head>
   
   
   
-  <body class="palette-primary-blue-grey palette-accent-grey">
-    
-      
-      
-    
-    <div class="backdrop">
-      <div class="backdrop-paper"></div>
-    </div>
-    <input class="toggle" type="checkbox" id="toggle-drawer">
-    <input class="toggle" type="checkbox" id="toggle-search">
-    <label class="toggle-button overlay" for="toggle-drawer"></label>
-    <header class="header">
-      <nav aria-label="Header">
-  <div class="bar default">
-    <div class="button button-menu" role="button" aria-label="Menu">
-      <label class="toggle-button icon icon-menu" for="toggle-drawer">
-        <span></span>
-      </label>
-    </div>
-    <div class="stretch">
-      <div class="title">
-        
-          <span class="path">
-            
-          </span>
-        
-        JuliaML
-      </div>
-    </div>
-    
-    
-      
-      <div class="button button-github" role="button" aria-label="GitHub">
-        <a href="https://github.com/JuliaML" title="@JuliaML on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
-      </div>
-    
-    <div class="button button-search" role="button" aria-label="Search">
-      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
-    </div>
-  </div>
-  <div class="bar search">
-    <div class="button button-close" role="button" aria-label="Close">
-      <label class="toggle-button icon icon-back" for="toggle-search"></label>
-    </div>
-    <div class="stretch">
-      <div class="field">
-        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
-      </div>
-    </div>
-    <div class="button button-reset" role="button" aria-label="Search">
-      <button class="toggle-button icon icon-close" id="reset-search"></button>
-    </div>
-  </div>
-</nav>
-    </header>
-    <main class="main">
-      
-      <div class="drawer">
-        <nav aria-label="Navigation">
   
-  <a href="https://github.com/JuliaML/Learn.jl" class="project">
-    <div class="banner">
-      
-        <div class="logo">
-          <img src="./images/juliaml_logo.png">
-        </div>
-      
-      <div class="name">
-        <strong>
-          JuliaML
-          <span class="version">
-            
-          </span>
-        </strong>
+    <body data-md-color-primary="blue-grey" data-md-color-accent="grey">
+  
+    <svg class="md-svg">
+      <defs>
         
-          <br>
-          JuliaML/Learn.jl
         
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="." title="JuliaML" class=" md-logo  md-header-nav__button">
+          
+            <img src="./images/juliaml_logo.png" width="24" height="24">
+          
+        </a>
       </div>
-    </div>
-  </a>
-  <div class="scrollable">
-    <div class="wrapper">
-      
-        <ul class="repo">
-          <li class="repo-download">
-            
-            <a href="https://github.com/JuliaML/Learn.jl/archive/master.zip" target="_blank" title="Download" data-action="download">
-              <i class="icon icon-download"></i> Download
-            </a>
-          </li>
-          <li class="repo-stars">
-            <a href="https://github.com/JuliaML/Learn.jl/stargazers" target="_blank" title="Stargazers" data-action="star">
-              <i class="icon icon-star"></i> Stars
-              <span class="count">&ndash;</span>
-            </a>
-          </li>
-        </ul>
-        <hr>
-      
-      <div class="toc">
-        <ul>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
           
             
-  <li>
-    <a class="current" title="Home" href=".">
+              
+            
+            Home
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+              
+
+
+  
+
+
+  <a href="https://github.com/JuliaML/Learn.jl" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+            
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <i class=" md-logo  md-nav__button">
+      
+        <img src="./images/juliaml_logo.png">
+      
+    </i>
+    JuliaML
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/JuliaML/Learn.jl" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  <li class="md-nav__item">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Home
+      </label>
+    
+    <a href="." title="Home" class="md-nav__link md-nav__link--active">
       Home
     </a>
     
       
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
       
-        <ul>
-          
-            <li class="anchor">
-              <a title="Learn" href="#learn">
-                Learn
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="LearnBase" href="#learnbase">
-                LearnBase
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Losses" href="#losses">
-                Losses
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Transformations" href="#transformations">
-                Transformations
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="ObjectiveFunctions" href="#objectivefunctions">
-                ObjectiveFunctions
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="StochasticOptimization" href="#stochasticoptimization">
-                StochasticOptimization
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="MLDataUtils" href="#mldatautils">
-                MLDataUtils
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="MLRisk" href="#mlrisk">
-                MLRisk
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="MLMetrics" href="#mlmetrics">
-                MLMetrics
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="MLPlots" href="#mlplots">
-                MLPlots
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="MLKernels" href="#mlkernels">
-                MLKernels
-              </a>
-            </li>
-          
-        </ul>
+        <li class="md-nav__item">
+  <a href="#learn-an-all-in-one-workbench-which-simply-imports-and-re-exports-the-packages-below-this-is-a-convenience-wrapper-for-an-easy-way-to-get-started-with-the-juliaml-ecosystem" title="Learn: An all-in-one workbench, which simply imports and re-exports the packages below.  This is a convenience wrapper for an easy way to get started with the JuliaML ecosystem." class="md-nav__link">
+    Learn: An all-in-one workbench, which simply imports and re-exports the packages below.  This is a convenience wrapper for an easy way to get started with the JuliaML ecosystem.
+  </a>
+  
+</li>
       
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="Design" href="design/">
-      Design
-    </a>
-    
-  </li>
-
-          
-        </ul>
+        <li class="md-nav__item">
+  <a href="#core" title="Core" class="md-nav__link">
+    Core
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
-          <hr>
-          <span class="section">The author</span>
-          <ul>
-            
-            
-              
-              <li>
-                <a href="https://github.com/JuliaML" target="_blank" title="@JuliaML on GitHub">
-                  @JuliaML on GitHub
-                </a>
-              </li>
-            
-          </ul>
+          <li class="md-nav__item">
+  <a href="#learnbase-the-abstractions-and-methods-for-juliaml-packages-this-is-a-core-dependency-of-most-packages" title="LearnBase: The abstractions and methods for JuliaML packages.  This is a core dependency of most packages." class="md-nav__link">
+    LearnBase: The abstractions and methods for JuliaML packages.  This is a core dependency of most packages.
+  </a>
+  
+</li>
         
-      </div>
-    </div>
-  </div>
+          <li class="md-nav__item">
+  <a href="#lossfunctions-supervised-and-unsupervised-loss-functions-for-both-distance-based-probabilities-and-regressions-and-margin-based-svm-approaches" title="LossFunctions: Supervised and unsupervised loss functions for both distance-based (probabilities and regressions) and margin-based (SVM) approaches." class="md-nav__link">
+    LossFunctions: Supervised and unsupervised loss functions for both distance-based (probabilities and regressions) and margin-based (SVM) approaches.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objectivefunctions-generic-definitions-of-objective-functions-using-abstractions-from-learnbase" title="ObjectiveFunctions: Generic definitions of objective functions using abstractions from LearnBase." class="md-nav__link">
+    ObjectiveFunctions: Generic definitions of objective functions using abstractions from LearnBase.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#penaltyfunctions-provides-generic-implementations-for-a-diverse-set-of-penalty-functions-that-are-commonly-used-for-regularization-purposes" title="PenaltyFunctions:  Provides generic implementations for a diverse set of penalty functions that are commonly used for regularization purposes." class="md-nav__link">
+    PenaltyFunctions:  Provides generic implementations for a diverse set of penalty functions that are commonly used for regularization purposes.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mlkernels-a-julia-package-for-mercer-kernel-functions-or-the-covariance-functions-used-in-gaussian-processes-that-are-used-in-the-kernel-methods-of-machine-learning" title="MLKernels: A Julia package for Mercer kernel functions (or the covariance functions used in Gaussian processes) that are used in the kernel methods of machine learning." class="md-nav__link">
+    MLKernels: A Julia package for Mercer kernel functions (or the covariance functions used in Gaussian processes) that are used in the kernel methods of machine learning.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformations-experimental-dynamic-tensor-computation-framework-static-transforms-activation-functions-neural-nets-and-more" title="Transformations (experimental): Dynamic tensor computation framework. Static transforms, activation functions, neural nets, and more." class="md-nav__link">
+    Transformations (experimental): Dynamic tensor computation framework. Static transforms, activation functions, neural nets, and more.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-algorithms" title="Learning Algorithms" class="md-nav__link">
+    Learning Algorithms
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learningstrategies-a-generic-and-modular-framework-for-building-custom-iterative-algorithms-in-julia" title="LearningStrategies: A generic and modular framework for building custom iterative algorithms in Julia." class="md-nav__link">
+    LearningStrategies: A generic and modular framework for building custom iterative algorithms in Julia.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stochasticoptimization-extension-of-learningstrategies-implementing-stochastic-gradient-descent-and-online-optimization-algorithms-and-components-parameter-update-models-adagrad-adam-etc-minibatch-gradient-averaging" title="StochasticOptimization: Extension of LearningStrategies implementing stochastic gradient descent and online optimization algorithms and components.  Parameter update models (Adagrad, ADAM, etc).  Minibatch gradient averaging." class="md-nav__link">
+    StochasticOptimization: Extension of LearningStrategies implementing stochastic gradient descent and online optimization algorithms and components.  Parameter update models (Adagrad, ADAM, etc).  Minibatch gradient averaging.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reinforcement-learning" title="Reinforcement Learning" class="md-nav__link">
+    Reinforcement Learning
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reinforce-abstractions-algorithms-and-utilities-for-reinforcement-learning-in-julia" title="Reinforce: Abstractions, algorithms, and utilities for reinforcement learning in Julia" class="md-nav__link">
+    Reinforce: Abstractions, algorithms, and utilities for reinforcement learning in Julia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openaigym-openais-gym-wrapped-as-a-reinforcejl-environment" title="OpenAIGym: OpenAI's Gym wrapped as a Reinforce.jl environment" class="md-nav__link">
+    OpenAIGym: OpenAI's Gym wrapped as a Reinforce.jl environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atarialgos-arcade-learning-environment-ale-wrapped-as-a-reinforcejl-environment" title="AtariAlgos: Arcade Learning Environment (ALE) wrapped as a Reinforce.jl environment" class="md-nav__link">
+    AtariAlgos: Arcade Learning Environment (ALE) wrapped as a Reinforce.jl environment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" title="Tools" class="md-nav__link">
+    Tools
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mldatautils-dataset-iteration-and-splitting-testtrain-k-folds-cross-validation-batching-etc" title="MLDataUtils: Dataset iteration and splitting (test/train, K-folds cross validation, batching, etc)." class="md-nav__link">
+    MLDataUtils: Dataset iteration and splitting (test/train, K-folds cross validation, batching, etc).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mllabelutils-utility-package-for-working-with-classification-targets-and-label-encodings-docs" title="MLLabelUtils: Utility package for working with classification targets and label-encodings (Docs)" class="md-nav__link">
+    MLLabelUtils: Utility package for working with classification targets and label-encodings (Docs)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mldatasets-machine-learning-datasets-for-julia" title="MLDatasets: Machine Learning Datasets for Julia" class="md-nav__link">
+    MLDatasets: Machine Learning Datasets for Julia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mlmetrics-metrics-for-scoring-machine-learning-models-in-julia-mse-accuracy-and-more" title="MLMetrics: Metrics for scoring machine learning models in Julia.  MSE, accuracy, and more." class="md-nav__link">
+    MLMetrics: Metrics for scoring machine learning models in Julia.  MSE, accuracy, and more.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valuehistories-utilities-to-efficiently-track-learning-curves-or-other-optimization-information" title="ValueHistories: Utilities to efficiently track learning curves or other optimization information" class="md-nav__link">
+    ValueHistories: Utilities to efficiently track learning curves or other optimization information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mlplots-plotting-recipes-to-be-used-with-plots-also-check-out-plotrecipes" title="MLPlots: Plotting recipes to be used with Plots.  Also check out PlotRecipes." class="md-nav__link">
+    MLPlots: Plotting recipes to be used with Plots.  Also check out PlotRecipes.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-notable-packages" title="Other notable packages" class="md-nav__link">
+    Other notable packages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mxnet-mxnet-julia-package-flexible-and-efficient-deep-learning-in-julia" title="MXNet: MXNet Julia Package - flexible and efficient deep learning in Julia" class="md-nav__link">
+    MXNet: MXNet Julia Package - flexible and efficient deep learning in Julia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensorflow-a-julia-wrapper-for-tensorflow" title="TensorFlow: A Julia wrapper for TensorFlow" class="md-nav__link">
+    TensorFlow: A Julia wrapper for TensorFlow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knet-koc-university-deep-learning-framework-it-supports-gpu-operation-and-automatic-differentiation-using-dynamic-computational-graphs-for-models-defined-in-plain-julia" title="Knet: Koç University deep learning framework.  It supports GPU operation and automatic differentiation using dynamic computational graphs for models defined in plain Julia." class="md-nav__link">
+    Knet: Koç University deep learning framework.  It supports GPU operation and automatic differentiation using dynamic computational graphs for models defined in plain Julia.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mocha-deep-learning-framework-for-julia-author-recommends-mxnet-instead" title="Mocha: Deep Learning framework for Julia (author recommends MXNet instead)" class="md-nav__link">
+    Mocha: Deep Learning framework for Julia (author recommends MXNet instead)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ksvm-support-vector-machines-svm-in-pure-julia" title="KSVM: Support Vector Machines (SVM) in pure Julia" class="md-nav__link">
+    KSVM: Support Vector Machines (SVM) in pure Julia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-ai-packages" title="other AI packages" class="md-nav__link">
+    other AI packages
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
-      </div>
-      <article class="article">
-        <div class="wrapper">
+    
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="design/" title="Design" class="md-nav__link">
+        Design
+      </a>
+    
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="contributing/" title="Contributing" class="md-nav__link">
+        Contributing
+      </a>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learn-an-all-in-one-workbench-which-simply-imports-and-re-exports-the-packages-below-this-is-a-convenience-wrapper-for-an-easy-way-to-get-started-with-the-juliaml-ecosystem" title="Learn: An all-in-one workbench, which simply imports and re-exports the packages below.  This is a convenience wrapper for an easy way to get started with the JuliaML ecosystem." class="md-nav__link">
+    Learn: An all-in-one workbench, which simply imports and re-exports the packages below.  This is a convenience wrapper for an easy way to get started with the JuliaML ecosystem.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core" title="Core" class="md-nav__link">
+    Core
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learnbase-the-abstractions-and-methods-for-juliaml-packages-this-is-a-core-dependency-of-most-packages" title="LearnBase: The abstractions and methods for JuliaML packages.  This is a core dependency of most packages." class="md-nav__link">
+    LearnBase: The abstractions and methods for JuliaML packages.  This is a core dependency of most packages.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lossfunctions-supervised-and-unsupervised-loss-functions-for-both-distance-based-probabilities-and-regressions-and-margin-based-svm-approaches" title="LossFunctions: Supervised and unsupervised loss functions for both distance-based (probabilities and regressions) and margin-based (SVM) approaches." class="md-nav__link">
+    LossFunctions: Supervised and unsupervised loss functions for both distance-based (probabilities and regressions) and margin-based (SVM) approaches.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objectivefunctions-generic-definitions-of-objective-functions-using-abstractions-from-learnbase" title="ObjectiveFunctions: Generic definitions of objective functions using abstractions from LearnBase." class="md-nav__link">
+    ObjectiveFunctions: Generic definitions of objective functions using abstractions from LearnBase.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#penaltyfunctions-provides-generic-implementations-for-a-diverse-set-of-penalty-functions-that-are-commonly-used-for-regularization-purposes" title="PenaltyFunctions:  Provides generic implementations for a diverse set of penalty functions that are commonly used for regularization purposes." class="md-nav__link">
+    PenaltyFunctions:  Provides generic implementations for a diverse set of penalty functions that are commonly used for regularization purposes.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mlkernels-a-julia-package-for-mercer-kernel-functions-or-the-covariance-functions-used-in-gaussian-processes-that-are-used-in-the-kernel-methods-of-machine-learning" title="MLKernels: A Julia package for Mercer kernel functions (or the covariance functions used in Gaussian processes) that are used in the kernel methods of machine learning." class="md-nav__link">
+    MLKernels: A Julia package for Mercer kernel functions (or the covariance functions used in Gaussian processes) that are used in the kernel methods of machine learning.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformations-experimental-dynamic-tensor-computation-framework-static-transforms-activation-functions-neural-nets-and-more" title="Transformations (experimental): Dynamic tensor computation framework. Static transforms, activation functions, neural nets, and more." class="md-nav__link">
+    Transformations (experimental): Dynamic tensor computation framework. Static transforms, activation functions, neural nets, and more.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-algorithms" title="Learning Algorithms" class="md-nav__link">
+    Learning Algorithms
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learningstrategies-a-generic-and-modular-framework-for-building-custom-iterative-algorithms-in-julia" title="LearningStrategies: A generic and modular framework for building custom iterative algorithms in Julia." class="md-nav__link">
+    LearningStrategies: A generic and modular framework for building custom iterative algorithms in Julia.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stochasticoptimization-extension-of-learningstrategies-implementing-stochastic-gradient-descent-and-online-optimization-algorithms-and-components-parameter-update-models-adagrad-adam-etc-minibatch-gradient-averaging" title="StochasticOptimization: Extension of LearningStrategies implementing stochastic gradient descent and online optimization algorithms and components.  Parameter update models (Adagrad, ADAM, etc).  Minibatch gradient averaging." class="md-nav__link">
+    StochasticOptimization: Extension of LearningStrategies implementing stochastic gradient descent and online optimization algorithms and components.  Parameter update models (Adagrad, ADAM, etc).  Minibatch gradient averaging.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reinforcement-learning" title="Reinforcement Learning" class="md-nav__link">
+    Reinforcement Learning
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reinforce-abstractions-algorithms-and-utilities-for-reinforcement-learning-in-julia" title="Reinforce: Abstractions, algorithms, and utilities for reinforcement learning in Julia" class="md-nav__link">
+    Reinforce: Abstractions, algorithms, and utilities for reinforcement learning in Julia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openaigym-openais-gym-wrapped-as-a-reinforcejl-environment" title="OpenAIGym: OpenAI's Gym wrapped as a Reinforce.jl environment" class="md-nav__link">
+    OpenAIGym: OpenAI's Gym wrapped as a Reinforce.jl environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atarialgos-arcade-learning-environment-ale-wrapped-as-a-reinforcejl-environment" title="AtariAlgos: Arcade Learning Environment (ALE) wrapped as a Reinforce.jl environment" class="md-nav__link">
+    AtariAlgos: Arcade Learning Environment (ALE) wrapped as a Reinforce.jl environment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" title="Tools" class="md-nav__link">
+    Tools
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mldatautils-dataset-iteration-and-splitting-testtrain-k-folds-cross-validation-batching-etc" title="MLDataUtils: Dataset iteration and splitting (test/train, K-folds cross validation, batching, etc)." class="md-nav__link">
+    MLDataUtils: Dataset iteration and splitting (test/train, K-folds cross validation, batching, etc).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mllabelutils-utility-package-for-working-with-classification-targets-and-label-encodings-docs" title="MLLabelUtils: Utility package for working with classification targets and label-encodings (Docs)" class="md-nav__link">
+    MLLabelUtils: Utility package for working with classification targets and label-encodings (Docs)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mldatasets-machine-learning-datasets-for-julia" title="MLDatasets: Machine Learning Datasets for Julia" class="md-nav__link">
+    MLDatasets: Machine Learning Datasets for Julia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mlmetrics-metrics-for-scoring-machine-learning-models-in-julia-mse-accuracy-and-more" title="MLMetrics: Metrics for scoring machine learning models in Julia.  MSE, accuracy, and more." class="md-nav__link">
+    MLMetrics: Metrics for scoring machine learning models in Julia.  MSE, accuracy, and more.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valuehistories-utilities-to-efficiently-track-learning-curves-or-other-optimization-information" title="ValueHistories: Utilities to efficiently track learning curves or other optimization information" class="md-nav__link">
+    ValueHistories: Utilities to efficiently track learning curves or other optimization information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mlplots-plotting-recipes-to-be-used-with-plots-also-check-out-plotrecipes" title="MLPlots: Plotting recipes to be used with Plots.  Also check out PlotRecipes." class="md-nav__link">
+    MLPlots: Plotting recipes to be used with Plots.  Also check out PlotRecipes.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-notable-packages" title="Other notable packages" class="md-nav__link">
+    Other notable packages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mxnet-mxnet-julia-package-flexible-and-efficient-deep-learning-in-julia" title="MXNet: MXNet Julia Package - flexible and efficient deep learning in Julia" class="md-nav__link">
+    MXNet: MXNet Julia Package - flexible and efficient deep learning in Julia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensorflow-a-julia-wrapper-for-tensorflow" title="TensorFlow: A Julia wrapper for TensorFlow" class="md-nav__link">
+    TensorFlow: A Julia wrapper for TensorFlow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knet-koc-university-deep-learning-framework-it-supports-gpu-operation-and-automatic-differentiation-using-dynamic-computational-graphs-for-models-defined-in-plain-julia" title="Knet: Koç University deep learning framework.  It supports GPU operation and automatic differentiation using dynamic computational graphs for models defined in plain Julia." class="md-nav__link">
+    Knet: Koç University deep learning framework.  It supports GPU operation and automatic differentiation using dynamic computational graphs for models defined in plain Julia.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mocha-deep-learning-framework-for-julia-author-recommends-mxnet-instead" title="Mocha: Deep Learning framework for Julia (author recommends MXNet instead)" class="md-nav__link">
+    Mocha: Deep Learning framework for Julia (author recommends MXNet instead)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ksvm-support-vector-machines-svm-in-pure-julia" title="KSVM: Support Vector Machines (SVM) in pure Julia" class="md-nav__link">
+    KSVM: Support Vector Machines (SVM) in pure Julia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-ai-packages" title="other AI packages" class="md-nav__link">
+    other AI packages
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
-            <h1>JuliaML</h1>
-          
-          <p>JuliaML is your one-stop-shop for learning models from data.  We provide general abstractions and algorithms for modeling and optimization, along with implementations of common models:</p>
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+               
+                 <a href="https://github.com/JuliaML/Learn.jl/edit/master/docs/index.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+               
+              
+                
+                  <h1>Home</h1>
+                
+                <p>JuliaML is your one-stop-shop for learning models from data.  We provide general abstractions and algorithms for modeling and optimization, along with implementations of common models:</p>
 <ul>
 <li>Flexible objective functions, and cost components:<ul>
 <li>Losses (supervised distance and margin losses, etc)</li>
 <li>Penalties (L1/L2 regularization, etc)</li>
-<li>(TODO) and other Costs</li>
+<li>Modular objective functions</li>
 </ul>
 </li>
 <li>Generic transformations:<ul>
@@ -308,7 +733,7 @@
 <li>Centering/scaling/normalization</li>
 <li>Dimensionality reduction</li>
 <li>Affine transformations (y = wx + b)</li>
-<li>(TODO) Directed Acyclic Graphs (DAG) of sub-transformations</li>
+<li>Neural nets, deep learning</li>
 </ul>
 </li>
 <li>Learning algorithms<ul>
@@ -328,92 +753,105 @@
 </ul>
 </li>
 </ul>
+<hr />
 <p>The design and structure of the organization is geared towards a modular and composable approach to all things data science.  Plug and play models, losses, penalties, and algorithms however you see fit, and at whatever granularity is appropriate.  Beginner users and those looking for ready-made solutions can use the convenience package <a href="https://github.com/JuliaML/Learn.jl">Learn</a>.  For custom modeling solutions, choose methods and components from any package:</p>
-<h2 id="learn"><a href="https://github.com/JuliaML/Learn.jl">Learn</a></h2>
-<p>An all-in-one workbench, which simply imports and re-exports the packages below.  This is a convenience wrapper for an easy way to get started with the JuliaML ecosystem.</p>
-<h2 id="learnbase"><a href="https://github.com/JuliaML/LearnBase.jl">LearnBase</a></h2>
-<p>The abstractions and methods for JuliaML packages.  This is a core dependency of most packages.</p>
-<h2 id="losses"><a href="https://github.com/JuliaML/Losses.jl">Losses</a></h2>
-<p>Supervised and unsupervised loss functions for both distance-based (probabilities and regressions) and margin-based (SVM) approaches.</p>
-<h2 id="transformations"><a href="https://github.com/JuliaML/Transformations.jl">Transformations</a></h2>
-<p>Static transforms, activation functions, and more.</p>
-<h2 id="objectivefunctions"><a href="https://github.com/JuliaML/ObjectiveFunctions.jl">ObjectiveFunctions</a></h2>
-<p>Generic definitions of objective functions using abstractions from LearnBase.</p>
-<h2 id="stochasticoptimization"><a href="https://github.com/JuliaML/StochasticOptimization.jl">StochasticOptimization</a></h2>
-<p>Gradient descent and online optimization algorithms and components.  Parameter update models (Adagrad, ADAM, etc).  Proximal methods.</p>
-<h2 id="mldatautils"><a href="https://github.com/JuliaML/MLDataUtils.jl">MLDataUtils</a></h2>
-<p>Dataset iteration and splitting (test/train, K-folds cross validation, batching, etc).</p>
-<h2 id="mlrisk"><a href="https://github.com/JuliaML/MLRisk.jl">MLRisk</a></h2>
-<p>Empirical risk minimization.</p>
-<h2 id="mlmetrics"><a href="https://github.com/JuliaML/MLMetrics.jl">MLMetrics</a></h2>
-<p>Metrics for scoring machine learning models in Julia.  MSE, accuracy, and more.</p>
-<h2 id="mlplots"><a href="https://github.com/JuliaML/MLPlots.jl">MLPlots</a></h2>
-<p>Plotting recipes to be used with <a href="https://github.com/tbreloff/Plots.jl">Plots</a>.  Also check out <a href="https://github.com/JuliaPlots/PlotRecipes.jl">PlotRecipes</a>.</p>
-<h2 id="mlkernels"><a href="https://github.com/JuliaML/MLKernels.jl">MLKernels</a></h2>
-<p>A Julia package for Mercer kernel functions (or the covariance functions used in Gaussian processes) that are used in the kernel methods of machine learning.</p>
-          <aside class="copyright" role="note">
-            
-              Copyright &copy; 2015-2016 JuliaML Members &ndash;
-            
-            Documentation built with
-            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
-            using the
-            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
-              Material
-            </a>
-            theme.
-          </aside>
-          
-            <footer class="footer">
+<h3 id="learn-an-all-in-one-workbench-which-simply-imports-and-re-exports-the-packages-below-this-is-a-convenience-wrapper-for-an-easy-way-to-get-started-with-the-juliaml-ecosystem"><a href="https://github.com/JuliaML/Learn.jl">Learn</a>: An all-in-one workbench, which simply imports and re-exports the packages below.  This is a convenience wrapper for an easy way to get started with the JuliaML ecosystem.</h3>
+<hr />
+<h2 id="core">Core</h2>
+<h3 id="learnbase-the-abstractions-and-methods-for-juliaml-packages-this-is-a-core-dependency-of-most-packages"><a href="https://github.com/JuliaML/LearnBase.jl">LearnBase</a>: The abstractions and methods for JuliaML packages.  This is a core dependency of most packages.</h3>
+<h3 id="lossfunctions-supervised-and-unsupervised-loss-functions-for-both-distance-based-probabilities-and-regressions-and-margin-based-svm-approaches"><a href="https://github.com/JuliaML/LossFunctions.jl">LossFunctions</a>: Supervised and unsupervised loss functions for both distance-based (probabilities and regressions) and margin-based (SVM) approaches.</h3>
+<h3 id="objectivefunctions-generic-definitions-of-objective-functions-using-abstractions-from-learnbase"><a href="https://github.com/JuliaML/ObjectiveFunctions.jl">ObjectiveFunctions</a>: Generic definitions of objective functions using abstractions from LearnBase.</h3>
+<h3 id="penaltyfunctions-provides-generic-implementations-for-a-diverse-set-of-penalty-functions-that-are-commonly-used-for-regularization-purposes"><a href="https://github.com/JuliaML/PenaltyFunctions.jl">PenaltyFunctions</a>:  Provides generic implementations for a diverse set of penalty functions that are commonly used for regularization purposes.</h3>
+<h3 id="mlkernels-a-julia-package-for-mercer-kernel-functions-or-the-covariance-functions-used-in-gaussian-processes-that-are-used-in-the-kernel-methods-of-machine-learning"><a href="https://github.com/JuliaML/MLKernels.jl">MLKernels</a>: A Julia package for Mercer kernel functions (or the covariance functions used in Gaussian processes) that are used in the kernel methods of machine learning.</h3>
+<h3 id="transformations-experimental-dynamic-tensor-computation-framework-static-transforms-activation-functions-neural-nets-and-more"><a href="https://github.com/JuliaML/Transformations.jl">Transformations</a> (experimental): Dynamic tensor computation framework. Static transforms, activation functions, neural nets, and more.</h3>
+<hr />
+<h2 id="learning-algorithms">Learning Algorithms</h2>
+<h3 id="learningstrategies-a-generic-and-modular-framework-for-building-custom-iterative-algorithms-in-julia"><a href="https://github.com/JuliaML/LearningStrategies.jl">LearningStrategies</a>: A generic and modular framework for building custom iterative algorithms in Julia.</h3>
+<h3 id="stochasticoptimization-extension-of-learningstrategies-implementing-stochastic-gradient-descent-and-online-optimization-algorithms-and-components-parameter-update-models-adagrad-adam-etc-minibatch-gradient-averaging"><a href="https://github.com/JuliaML/StochasticOptimization.jl">StochasticOptimization</a>: Extension of LearningStrategies implementing stochastic gradient descent and online optimization algorithms and components.  Parameter update models (Adagrad, ADAM, etc).  Minibatch gradient averaging.</h3>
+<hr />
+<h2 id="reinforcement-learning">Reinforcement Learning</h2>
+<h3 id="reinforce-abstractions-algorithms-and-utilities-for-reinforcement-learning-in-julia"><a href="https://github.com/JuliaML/Reinforce.jl">Reinforce</a>: Abstractions, algorithms, and utilities for reinforcement learning in Julia</h3>
+<h3 id="openaigym-openais-gym-wrapped-as-a-reinforcejl-environment"><a href="https://github.com/JuliaML/OpenAIGym.jl">OpenAIGym</a>: OpenAI's Gym wrapped as a Reinforce.jl environment</h3>
+<h3 id="atarialgos-arcade-learning-environment-ale-wrapped-as-a-reinforcejl-environment"><a href="https://github.com/JuliaML/AtariAlgos.jl">AtariAlgos</a>: Arcade Learning Environment (ALE) wrapped as a Reinforce.jl environment</h3>
+<hr />
+<h2 id="tools">Tools</h2>
+<h3 id="mldatautils-dataset-iteration-and-splitting-testtrain-k-folds-cross-validation-batching-etc"><a href="https://github.com/JuliaML/MLDataUtils.jl">MLDataUtils</a>: Dataset iteration and splitting (test/train, K-folds cross validation, batching, etc).</h3>
+<h3 id="mllabelutils-utility-package-for-working-with-classification-targets-and-label-encodings-docs"><a href="https://github.com/JuliaML/MLLabelUtils.jl">MLLabelUtils</a>: Utility package for working with classification targets and label-encodings (<a href="http://mllabelutilsjl.readthedocs.io/">Docs</a>)</h3>
+<h3 id="mldatasets-machine-learning-datasets-for-julia"><a href="https://github.com/JuliaML/MLDatasets.jl">MLDatasets</a>: Machine Learning Datasets for Julia</h3>
+<h3 id="mlmetrics-metrics-for-scoring-machine-learning-models-in-julia-mse-accuracy-and-more"><a href="https://github.com/JuliaML/MLMetrics.jl">MLMetrics</a>: Metrics for scoring machine learning models in Julia.  MSE, accuracy, and more.</h3>
+<h3 id="valuehistories-utilities-to-efficiently-track-learning-curves-or-other-optimization-information"><a href="https://github.com/JuliaML/ValueHistories.jl">ValueHistories</a>: Utilities to efficiently track learning curves or other optimization information</h3>
+<h3 id="mlplots-plotting-recipes-to-be-used-with-plots-also-check-out-plotrecipes"><a href="https://github.com/JuliaML/MLPlots.jl">MLPlots</a>: Plotting recipes to be used with <a href="https://github.com/tbreloff/Plots.jl">Plots</a>.  Also check out <a href="https://github.com/JuliaPlots/PlotRecipes.jl">PlotRecipes</a>.</h3>
+<hr />
+<h2 id="other-notable-packages">Other notable packages</h2>
+<h2 id="mxnet-mxnet-julia-package-flexible-and-efficient-deep-learning-in-julia"><a href="https://github.com/dmlc/MXNet.jl">MXNet</a>: MXNet Julia Package - flexible and efficient deep learning in Julia</h2>
+<h2 id="tensorflow-a-julia-wrapper-for-tensorflow"><a href="https://github.com/malmaud/TensorFlow.jl">TensorFlow</a>: A Julia wrapper for TensorFlow</h2>
+<h2 id="knet-koc-university-deep-learning-framework-it-supports-gpu-operation-and-automatic-differentiation-using-dynamic-computational-graphs-for-models-defined-in-plain-julia"><a href="https://github.com/denizyuret/Knet.jl">Knet</a>: Koç University deep learning framework.  It supports GPU operation and automatic differentiation using dynamic computational graphs for models defined in plain Julia.</h2>
+<h2 id="mocha-deep-learning-framework-for-julia-author-recommends-mxnet-instead"><a href="https://github.com/pluskid/Mocha.jl">Mocha</a>: Deep Learning framework for Julia (author recommends MXNet instead)</h2>
+<h2 id="ksvm-support-vector-machines-svm-in-pure-julia"><a href="https://github.com/Evizero/KSVM.jl">KSVM</a>: Support Vector Machines (SVM) in pure Julia</h2>
+<h2 id="other-ai-packages"><a href="https://github.com/svaksha/Julia.jl/blob/master/AI.md">other AI packages</a></h2>
               
-  <nav class="pagination" aria-label="Footer">
-    <div class="previous">
+            </article>
+          </div>
+        </div>
+      </main>
       
-    </div>
-    <div class="next">
-      
-        <a href="design/" title="Design">
-          <span class="direction">
-            Next
-          </span>
-          <div class="page">
-            <div class="stretch">
-              <div class="title">
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="design/" title="Design" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
                 Design
-              </div>
+              </span>
             </div>
-            <div class="button button-next" role="button" aria-label="Next">
-              <i class="icon icon-forward"></i>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
             </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2015-2017 JuliaML Members
           </div>
-        </a>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
       
     </div>
-  </nav>
-
-            </footer>
-          
-        </div>
-      </article>
-      <div class="results" role="status" aria-live="polite">
-        <div class="scrollable">
-          <div class="wrapper">
-            <div class="meta"></div>
-            <div class="list"></div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <script>
-      var base_url = '.';
-      var repo_id  = 'JuliaML/Learn.jl';
-    </script>
-    <script src="./assets/javascripts/application-997097ee0c.js"></script>
+  </div>
+</footer>
+      
+    </div>
     
-      <script src="./mathjax-config.js"></script>
+      <script src="./assets/javascripts/application-2afe21e0b2.js"></script>
+      <script>var config={url:{base:"."}},app=new Application(config);app.initialize()</script>
+      
+        <script src="./mathjax-config.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
     
-      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
     
+      
     
   </body>
 </html>

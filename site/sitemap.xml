@@ -4,7 +4,7 @@
     
     <url>
      <loc>https://JuliaML.github.io/</loc>
-     <lastmod>2016-06-30</lastmod>
+     <lastmod>2017-02-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,15 @@
     
     <url>
      <loc>https://JuliaML.github.io/design/</loc>
-     <lastmod>2016-06-30</lastmod>
+     <lastmod>2017-02-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>https://JuliaML.github.io/contributing/</loc>
+     <lastmod>2017-02-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
