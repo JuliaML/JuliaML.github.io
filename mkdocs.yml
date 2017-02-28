@@ -19,8 +19,8 @@ repo_url: 'https://github.com/JuliaML/Learn.jl'
 copyright: 'Copyright &copy; 2015-2017 JuliaML Members'
 
 pages:
-  - Home: index.md
-  - Design: design.md
+  - Packages: index.md
+  - History: design.md
   - Contributing: contributing.md
 
 docs_dir: 'docs'
