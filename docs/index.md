@@ -107,6 +107,10 @@ A Julia wrapper for TensorFlow
 
 Koç University deep learning framework.  It supports GPU operation and automatic differentiation using dynamic computational graphs for models defined in plain Julia.
 
+### [Flux](https://github.com/MikeInnes/Flux.jl)
+
+A high level API for machine learning, implemented in Julia.  Flux aims to provide a concise and expressive syntax for architectures that are hard to express within other frameworks.  The current focus is on ANNs with TensorFlow or MXNet as a backend.
+
 ### [Mocha](https://github.com/pluskid/Mocha.jl)
 
 Deep Learning framework for Julia (author recommends MXNet instead)
