@@ -47,6 +47,10 @@ A generic and modular framework for building custom iterative algorithms in Juli
 
 Extension of LearningStrategies implementing stochastic gradient descent and online optimization algorithms and components.  Parameter update models (Adagrad, ADAM, etc).  Minibatch gradient averaging.
 
+### [ContinuousOptimization](https://github.com/JuliaML/ContinuousOptimization.jl) (WIP, help needed)
+
+Unconstrained Continuous Full-Batch Optimization Algorithms based on the LearningStrategies framework.  This is a prototype package meant to explore how we could move [Optim](https://github.com/JuliaNLSolvers/Optim.jl) algorithms to a more modular and maintainable framework.
+
 ---
 
 ## Reinforcement Learning
