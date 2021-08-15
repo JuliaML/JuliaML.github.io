@@ -22,21 +22,9 @@ The abstractions and methods for JuliaML packages.  This is a core dependency of
 
 Supervised and unsupervised loss functions for both distance-based (probabilities and regressions) and margin-based (SVM) approaches.
 
-### [ObjectiveFunctions](https://github.com/JuliaML/ObjectiveFunctions.jl)
-
-Generic definitions of objective functions using abstractions from LearnBase.
-
 ### [PenaltyFunctions](https://github.com/JuliaML/PenaltyFunctions.jl)
 
  Provides generic implementations for a diverse set of penalty functions that are commonly used for regularization purposes.
-
-### [MLKernels](https://github.com/JuliaML/MLKernels.jl)
-
-A Julia package for Mercer kernel functions (or the covariance functions used in Gaussian processes) that are used in the kernel methods of machine learning.
-
-### [Transformations](https://github.com/JuliaML/Transformations.jl) (experimental)
-
-Dynamic tensor computation framework. Static transforms, activation functions, neural nets, and more.
 
 ---
 
@@ -58,9 +46,7 @@ Unconstrained Continuous Full-Batch Optimization Algorithms based on the Learnin
 
 ## Reinforcement Learning
 
-### [Reinforce](https://github.com/JuliaML/Reinforce.jl)
-
-Abstractions, algorithms, and utilities for reinforcement learning in Julia
+Most active Reinforcement Learning is taking place in: https://github.com/JuliaReinforcementLearning
 
 ### [OpenAIGym](https://github.com/JuliaML/OpenAIGym.jl)
 
@@ -94,33 +80,17 @@ Metrics for scoring machine learning models in Julia.  MSE, accuracy, and more.
 
 Utilities to efficiently track learning curves or other optimization information
 
-### [MLPlots](https://github.com/JuliaML/MLPlots.jl)
-
-Plotting recipes to be used with [Plots](https://github.com/tbreloff/Plots.jl).  Also check out [PlotRecipes](https://github.com/JuliaPlots/PlotRecipes.jl).
-
 ---
 
 ## Other notable packages
-
-### [MXNet](https://github.com/dmlc/MXNet.jl)
-
-MXNet Julia Package - flexible and efficient deep learning in Julia
-
-### [TensorFlow](https://github.com/malmaud/TensorFlow.jl)
-
-A Julia wrapper for TensorFlow
 
 ### [Knet](https://github.com/denizyuret/Knet.jl)
 
 Koç University deep learning framework.  It supports GPU operation and automatic differentiation using dynamic computational graphs for models defined in plain Julia.
 
-### [Flux](https://github.com/MikeInnes/Flux.jl)
+### [Flux](https://github.com/FluxML/Flux.jl)
 
 A high level API for machine learning, implemented in Julia.  Flux aims to provide a concise and expressive syntax for architectures that are hard to express within other frameworks.  The current focus is on ANNs with TensorFlow or MXNet as a backend.
-
-### [Mocha](https://github.com/pluskid/Mocha.jl)
-
-Deep Learning framework for Julia (author recommends MXNet instead)
 
 ### [KSVM](https://github.com/Evizero/KSVM.jl)
 
